@@ -109,3 +109,20 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 } */
+div{
+    padding:  20px;
+    text-align: center;
+}
+
+.bg-lightgrey{
+  background-color: lightgray;
+}
+
+
+#element{
+
+
+  div{
+    
+  }
+}
