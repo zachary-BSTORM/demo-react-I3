@@ -1,7 +1,11 @@
-import StateDemo from "../components/StateDemo";
+import { useState } from "react";
 
 export default function StateComponentDemo() {
+  const [value, setValue] = useState("John")
 
+  const changeName = () => {
+      setValue(value === "John" ? "New Value" : "John")
+    }
   return (
     <div>
       <h2>useState : changer une valeur pendant l'execution</h2>
@@ -11,7 +15,12 @@ export default function StateComponentDemo() {
         <li><p>Ensuite le déclarer dans le composant : <span>const [value , setValue] = usestate(valeur par défaut)</span></p></li>
       </ul>
       <h2>Exemple</h2>
-      <StateDemo />
+      <div>
+        <p>Value : {value}</p>
+
+        <button onClick={() => changeName()}>Change</button>
+        
+    </div>
     </div>
   )
 }

@@ -3,7 +3,7 @@ import Intro from "./demo/Intro";
 import PropsDemo from "./demo/PropsDemo";
 import StateComponentDemo from "./demo/StateDemo";
 import Compteur from "./exo/Compteur";
-import  ExoCarProps  from './exo/ExoProps';
+import  ExoCarProps  from './exo/ExoCarProps';
 
 
 function App(){

@@ -3,7 +3,7 @@
 // chaque vehicule est affiché avec une instance du composant
 // on transmet le vehicule à l'enfant en une fois
 // bonus : le parent possède une liste de style et peut les transmettre à l'enfant
-export function ExoCarProps() {
+export default function ExoCarProps() {
 
     let carList = [
     {
@@ -89,16 +89,92 @@ export function ExoCarProps() {
     ];
     
     let styleCar = [
-        {
-            backgroundColor : "red"
-        }
-    ]
+    {
+        backgroundColor: "#6c757d",
+        color: "#ffffff",
+        border: "2px solid #495057",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#2563eb",
+        color: "#ffffff",
+        border: "2px solid #1d4ed8",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#1f2937",
+        color: "#f9fafb",
+        border: "2px solid #111827",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#f8fafc",
+        color: "#0f172a",
+        border: "2px solid #cbd5e1",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "red",
+        color: "#ffffff",
+        border: "2px solid #b91c1c",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#9ca3af",
+        color: "#111827",
+        border: "2px solid #6b7280",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#16a34a",
+        color: "#ffffff",
+        border: "2px solid #15803d",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#1e3a8a",
+        color: "#ffffff",
+        border: "2px solid #172554",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#4b5563",
+        color: "#ffffff",
+        border: "2px solid #374151",
+        borderRadius: "8px",
+        padding: "12px"
+    },
+    {
+        backgroundColor: "#dc2626",
+        color: "#ffffff",
+        border: "2px solid #991b1b",
+        borderRadius: "8px",
+        padding: "12px"
+    }
+    ];
 
     return(
         <>
         
-            <child  car={carList[0]} />
+            <CarCard  car={carList[0]} style={styleCar[0]}/>
         </>
     )
     
+}
+
+
+function CarCard({car,style}) {
+    return(
+        <li style={style}>
+            <p>{car.marque}</p>
+        </li>
+    )
 }
