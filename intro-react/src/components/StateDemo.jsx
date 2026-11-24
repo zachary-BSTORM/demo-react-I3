@@ -8,8 +8,12 @@ export default function StateDemo() {
         setValue(value === "John" ? "New Value" : "John")
     }
 
-    return (<div>
+    return (
+    <div>
         <p>Value : {value}</p>
+
         <button onClick={() => changeName()}>Change</button>
-    </div>)
+        
+    </div>
+    )
 }
