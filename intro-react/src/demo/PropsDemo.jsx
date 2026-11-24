@@ -3,6 +3,7 @@ import { useState } from "react";
 
 /* Composant Parent qui transmet l'information*/
 export default function PropsDemo() {
+
     // informations qui descend vers l'enfant
     const [value , setValue] = useState(0)
 
@@ -10,6 +11,7 @@ export default function PropsDemo() {
     const [valueFromChild,setValueFromChild] = useState("default")
 
     const increment = () => {
+        // prev fait référence à la dernière valeur
         setValue((prev) => prev + 1)
     }
     
@@ -28,7 +30,7 @@ export default function PropsDemo() {
         {/* Ici lors de l'appel du composant enfant on transmet les éléments*/}
         <Child value={value} action={increment} setUsernameChild={updateValue}/>
 
-
+        {/* Affichage de la valeur avec l'interpolation */}
         <p>value from child : {valueFromChild}</p>
         </>
     )
