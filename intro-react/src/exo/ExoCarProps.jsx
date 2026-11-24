@@ -163,8 +163,21 @@ export default function ExoCarProps() {
 
     return(
         <>
-        
-            <CarCard  car={carList[0]} style={styleCar[0]}/>
+            <h1>Car</h1>
+
+            
+            {
+            carList.map((c,index) => 
+
+            <CarCard 
+            key={index} 
+            car={c} 
+            style={styleCar[index]}
+            />
+
+            )
+            }
+
         </>
     )
     
@@ -173,8 +186,16 @@ export default function ExoCarProps() {
 
 function CarCard({car,style}) {
     return(
-        <li style={style}>
-            <p>{car.marque}</p>
-        </li>
+            <li>
+                <div style={style}>
+                    <h2>marque : {car.marque}</h2>
+                    <p>couleur : {car.color}</p>
+                    <p>année : {car.annee}</p>
+                    <p>prix : {car.prix}</p>
+                    <p>{car.description}</p>
+                </div>
+                <img src={car.image} alt={car.brand} width={'200px'}/>
+
+            </li>
     )
 }
