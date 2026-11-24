@@ -5,12 +5,12 @@
 
 - npm i : installe les dépendances
 
-- npm run 
+- npm run : commandes package.json
 
     - npm run dev : lance le projet
 
 
-- UN Composant est une fonction javascript qui renvoie du JSX
+- Un Composant est une fonction javascript qui renvoie du JSX
 
 - Dans une fonction react il est possible de : 
     - déclarer : 
@@ -24,8 +24,14 @@
     - react utilise un DOM virtuel qui permet de modifier le contenu du DOM 
 
     - pour voir une valeur changer pendant l'execution on utilise les Hooks : 
-    useState(value) : 
-        - const [valeur , modificateur] = useState(defaut)
+        - useState(value) : 
+        const [valeur , modificateur] = useState(defaut)
 
+    ```jsx
+    import { useState } from "react";
+    function App(){
+        const [value , setValue] = useState(0)
+    }
+    ```
 
 - le Style peut être global ( index.css ) ou propre à un composant ( inline ou objet style) 
