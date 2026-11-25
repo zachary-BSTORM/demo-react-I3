@@ -1,13 +1,18 @@
-import ComponentDemo from "./demo/Composant";
-import Intro from "./demo/Intro";
-import PropsDemo from "./demo/PropsDemo";
-import StateComponentDemo from "./demo/StateDemo";
-import Compteur from "./exo/Compteur";
-import ExoCarProps from './exo/ExoCarProps';
+// import ComponentDemo from "./demo/Composant";
+// import Intro from "./demo/Intro";
+// import PropsDemo from "./demo/PropsDemo";
+// import StateComponentDemo from "./demo/StateDemo";
+// import Compteur from "./exo/Compteur";
+// import ExoCarProps from './exo/ExoCarProps';
+
+import AffichageFood from "./exo/AffichageFood";
 
 
 
 function App(){
+
+
+
 
     return (
         <>
@@ -28,9 +33,12 @@ function App(){
             <h2>Exercices</h2>
             
             </div>
-            <Compteur/> */}
+            <Compteur/> 
 
             <ExoCarProps />
+            */}
+
+            <AffichageFood />
 
 
         </>
